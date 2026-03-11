@@ -22,6 +22,7 @@ public class DesktoppaneDemo extends JFrame {
         if1 = new JInternalFrame("factorial)", true, false, false, false);
         if1.setSize(250, 150);
         if1.setLocation(30, 30);
+        //factorial
         
         enterLabel = new JLabel("enter number:");
         numberField = new JTextField(5);
@@ -57,16 +58,21 @@ public class DesktoppaneDemo extends JFrame {
         if2.setSize(200, 150);
         if2.setLocation(250, 30);
         if2.setVisible(true);
+        // fibonacci
+        
+
 
         if3 = new JInternalFrame("maximizable ", false, false, true, false);
         if3.setSize(200, 150);
         if3.setLocation(30, 200);
         if3.setVisible(true);
+        //power
 
         if4 = new JInternalFrame("iconifiable ", false, false, false, true);
         if4.setSize(200, 150);
         if4.setLocation(250, 200);
         if4.setVisible(true);
+        //take a text area, write paragraph, and find the nuber of vowels
         
         if5 = new JInternalFrame("all attributes true", true, true, true, true);
         if5.setSize(250, 150);
