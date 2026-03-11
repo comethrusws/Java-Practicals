@@ -12,27 +12,27 @@ public class DesktoppaneDemo extends JFrame {
 
         JDesktopPane desktopPane = new JDesktopPane();
 
-        JInternalFrame if1 = new JInternalFrame("if1: Resizable Only", true, false, false, false);
+        JInternalFrame if1 = new JInternalFrame("resizable", true, false, false, false);
         if1.setSize(200, 150);
         if1.setLocation(30, 30);
         if1.setVisible(true);
 
-        JInternalFrame if2 = new JInternalFrame("if2: Closable Only", false, true, false, false);
+        JInternalFrame if2 = new JInternalFrame("closable ", false, true, false, false);
         if2.setSize(200, 150);
         if2.setLocation(250, 30);
         if2.setVisible(true);
 
-        JInternalFrame if3 = new JInternalFrame("if3: Maximizable Only", false, false, true, false);
+        JInternalFrame if3 = new JInternalFrame("maximizable ", false, false, true, false);
         if3.setSize(200, 150);
         if3.setLocation(30, 200);
         if3.setVisible(true);
 
-        JInternalFrame if4 = new JInternalFrame("if4: Iconifiable Only", false, false, false, true);
+        JInternalFrame if4 = new JInternalFrame("iconifiable ", false, false, false, true);
         if4.setSize(200, 150);
         if4.setLocation(250, 200);
         if4.setVisible(true);
         
-        JInternalFrame if5 = new JInternalFrame("if5: All Attributes True", true, true, true, true);
+        JInternalFrame if5 = new JInternalFrame("all attributes true", true, true, true, true);
         if5.setSize(250, 150);
         if5.setLocation(480, 115);
         if5.setVisible(true);
