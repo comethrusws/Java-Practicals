@@ -12,39 +12,39 @@ public class WindowEventDemo extends JFrame implements WindowListener {
         setTitle("Window Event Demonstration");
         setSize(400, 300);
         
-        // We do not exit on close by default so we can catch windowClosing,
+        // we do not exit on close by default so we can catch windowclosing,
         // but we'll manually exit when it closes if we want to.
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
-        statusLabel = new JLabel("Status: Window Created", SwingConstants.CENTER);
+        statusLabel = new JLabel("sup brother?", SwingConstants.CENTER);
         add(statusLabel);
         
-        // Register the WindowListener
+        // register the windowlistener
         addWindowListener(this);
         
         setVisible(true);
     }
 
-    // --- WindowListener Methods ---
+    // --- windowlistener methods ---
 
     @Override
     public void windowOpened(WindowEvent e) {
-        System.out.println("Window Opened: The window has become visible for the first time.");
-        statusLabel.setText("Status: Window Opened");
+        System.out.println("window opened for the first time... finally");
+        statusLabel.setText("heheh hallo");
     }
 
     @Override
     public void windowClosing(WindowEvent e) {
-        System.out.println("Window Closing: The user is trying to close the window.");
-        statusLabel.setText("Status: Window Closing...");
+        System.out.println("window closing... user clicked the cross button");
+        statusLabel.setText("window closing? ts sad bruh...");
         
-        // Custom close confirmation
+        // custom close confirmation
         int choice = JOptionPane.showConfirmDialog(this, 
-            "Are you sure you want to exit?", "Confirm Exit", 
+            "sure to exit bro?", "Confirm Exit", 
             JOptionPane.YES_NO_OPTION);
             
         if (choice == JOptionPane.YES_OPTION) {
-            // Proceed to close the window
+            // proceed to close the window
             e.getWindow().dispose();
             System.exit(0);
         }
@@ -52,31 +52,32 @@ public class WindowEventDemo extends JFrame implements WindowListener {
 
     @Override
     public void windowClosed(WindowEvent e) {
-        // This is called after the window has been closed/disposed
-        System.out.println("Window Closed: The window has successfully closed.");
+        // this is called after the window has been closed/disposed
+        System.out.println("window is closed completely now bye bye");
     }
 
     @Override
     public void windowIconified(WindowEvent e) {
-        System.out.println("Window Iconified: The window was minimized.");
+        System.out.println("window minimized... hiding it from teacher maybe");
+        statusLabel.setText("alt-tab pro max");
     }
 
     @Override
     public void windowDeiconified(WindowEvent e) {
-        System.out.println("Window Deiconified: The window was restored from minimized state.");
-        statusLabel.setText("Status: Window Restored");
+        System.out.println("window brought back from minimized state... catching up with code");
+        statusLabel.setText("teacher went back to podium lol");
     }
 
     @Override
     public void windowActivated(WindowEvent e) {
-        System.out.println("Window Activated: The window became the active/focused window.");
-        statusLabel.setText("Status: Window Activated");
+        System.out.println("window is focused now");
+        statusLabel.setText("im awake im awake");
     }
 
     @Override
     public void windowDeactivated(WindowEvent e) {
-        System.out.println("Window Deactivated: The window lost focus.");
-        statusLabel.setText("Status: Window Deactivated");
+        System.out.println("window lost focus... looking at another screen probably");
+        statusLabel.setText("brb gonna text real quick");
     }
 
     public static void main(String[] args) {
