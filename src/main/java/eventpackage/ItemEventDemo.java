@@ -6,7 +6,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 public class ItemEventDemo extends JFrame implements ItemListener {
-    private JCheckBox javaBox, pythonBox;
+    private JCheckBox javaBox, pythonBox, rustBox;
     private JRadioButton maleRadio, femaleRadio;
     private JLabel statusLabel;
 
@@ -33,8 +33,10 @@ public class ItemEventDemo extends JFrame implements ItemListener {
         checkPanel.setBorder(BorderFactory.createTitledBorder("what do u like?"));
         javaBox = new JCheckBox("java");
         pythonBox = new JCheckBox("python");
+        rustBox = new JCheckBox("rust");
         checkPanel.add(javaBox);
         checkPanel.add(pythonBox);
+        checkPanel.add(rustBox);
         mainPanel.add(checkPanel);
         mainPanel.add(Box.createVerticalStrut(10));
 
@@ -53,6 +55,7 @@ public class ItemEventDemo extends JFrame implements ItemListener {
         // adding listeners
         javaBox.addItemListener(this);
         pythonBox.addItemListener(this);
+        rustBox.addItemListener(this);
         maleRadio.addItemListener(this);
         femaleRadio.addItemListener(this);
 
@@ -62,13 +65,13 @@ public class ItemEventDemo extends JFrame implements ItemListener {
 
     @Override
     public void itemStateChanged(ItemEvent e) {
-        // checking which one got clicked
         Object source = e.getSource();
         int state = e.getStateChange();
         String name = "";
 
         if (source == javaBox) name = "java";
         else if (source == pythonBox) name = "python";
+        else if (source == rustBox) name = "rust";
         else if (source == maleRadio) name = "male";
         else if (source == femaleRadio) name = "female";
 
