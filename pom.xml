@@ -11,4 +11,12 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>13.2.1.jre11</version>
+    </dependency>
+  </dependencies>
 </project>
